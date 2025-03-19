@@ -3,19 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "server": "nodemon backend/server.mjs",
+    "dev": "node backend/server.mjs",
     "build": "next build",
-    "start": "next start",
+    "start": "node backend/server.mjs",
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "next": "15.2.3",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
-    "next": "15.2.3"
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "dotenv": "^16.4.7",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
-    "@eslint/eslintrc": "^3"
+    "nodemon": "^3.1.9"
   }
 }
