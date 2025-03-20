@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "nodemon backend/server.mjs",
-    "dev": "node backend/server.mjs",
-    "build": "next build",
+    "dev": "nodemon backend/server.mjs",
     "start": "node backend/server.mjs",
+    "build": "next build",
     "lint": "next lint"
   },
   "dependencies": {

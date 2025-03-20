@@ -8,52 +8,54 @@ export default function Home() {
     <>
       <Meta title='Home' />
       <div>
-        <h1>NextJS + Express Starter Kit</h1>
+        <h1 class='mb-4'>Next.js + Express Starter Kit (SSR)</h1>
         <p>
-          A simple full-stack boilerplate template using{' '}
-          <strong>Express, NextJS, Redux Toolkit</strong>.
+          A full-stack boilerplate template leveraging{' '}
+          <strong> Next.js, Express, and Redux Toolkit</strong>. This template
+          provides a robust foundation for developing modern web applications
+          with <strong>server-side rendering (SSR)</strong>.
         </p>
-        <p>Feel free to customize or extend it as needed.</p>
+
+        <h2>Project Structure</h2>
+        <ul>
+          <li>
+            <strong>backend/</strong> – Express.js server
+          </li>
+          <li>
+            <strong>src/</strong> – Next.js application
+          </li>
+        </ul>
 
         <h2>Features</h2>
         <ul>
           <li>
-            Pre-configured with <code>@reduxjs/toolkit</code>
+            Pre-configured with Redux Toolkit (`createSlice` and `createApi`).
           </li>
           <li>
-            Integrated with <code>react-bootstrap</code> for basic styling.
+            Custom `useIsClient` hook prevents React hydration mismatches.
           </li>
-          <li>Simple navigation with a Navbar and demo pages.</li>
-          <li>
-            Example of backend API calls using <code>{`createApi`}</code> from
-            Redux Toolkit.
-          </li>
-          <li>
-            Local storage handling using <code>{`createSlice`}</code> from Redux
-            Toolkit.
-          </li>
-          <li>
-            Backend setup with <code>nodemon</code> for efficient development.
-          </li>
-          <li>Proxy configured for smooth API calls during development.</li>
-          <li>Uses CORS middleware to handle cross-origin requests.</li>
+          <li>Styled with `react-bootstrap` for easy UI styling.</li>
+          <li>Navigation with `Home` and `Features` pages as examples.</li>
+          <li>Middleware: `morgan`, `cors`, `body-parser` configured.</li>
+          <li>ES Module support using `.mjs`.</li>
+          <li>Developer tools: `nodemon` for backend hot-reloading.</li>
         </ul>
 
         <Link href={'/features'}>
           <p>Go to features screen</p>
         </Link>
 
-        <h2>Directory Structure</h2>
-        <pre>
-          ├── backend/ # Express.js backend <br />
-          ├── .env # Environment variables (NODE_ENV, PORT, etc.)
-        </pre>
-
         <h2>Tech Stack</h2>
         <ul>
-          <li>Frontend: NextJS, Redux Toolkit</li>
-          <li>Backend: Express.js</li>
-          <li>Styling: React-Bootstrap</li>
+          <li>
+            <strong>Client:</strong> Next.js, Redux Toolkit
+          </li>
+          <li>
+            <strong>Server:</strong> Express.js
+          </li>
+          <li>
+            <strong>Styling:</strong> React-Bootstrap
+          </li>
         </ul>
 
         <h2>Requirements</h2>
@@ -62,53 +64,88 @@ export default function Home() {
           <li>Optional: React Developer Tools & Redux DevTools</li>
         </ul>
 
-        <h2>Getting Started</h2>
+        <h2>Installation & Setup</h2>
         <pre>
-          # Make copy of the repository <br />
-          npx degit https://github.com/astra-media/ example <br />
-          cd ./example <br />
-          or <br /># Clone the repository <br />
-          git clone https://github.com/astra-media/ example <br />
-          cd ./example <br />
-          <br /># Install dependencies <br />
-          npm install <br />
-          cd frontend <br />
-          npm install
+          <code>
+            npx degit https://github.com/astra-media/nextjs-express-starter.git
+            example
+            <br />
+            cd example
+            <br />
+            <br />
+            # OR Clone via Git git clone
+            <br />
+            https://github.com/astra-media/nextjs-express-starter.git example
+            <br />
+            cd example
+            <br />
+            <br />
+            # Install dependencies
+            <br />
+            npm install
+          </code>
         </pre>
 
         <h2>Running the Development Server</h2>
-        <pre>npm run dev # Starts both frontend and backend servers</pre>
+        <pre>
+          <code>npm run server # Starts the Express server with nodemon</code>
+        </pre>
         <p>
-          Backend runs on <strong>http://localhost:3000/</strong>, frontend on{' '}
-          <strong>http://localhost:5173/</strong>.
+          The server runs on <strong>http://localhost:3000/</strong>.
         </p>
 
+        <h2>Building for Production</h2>
+        <pre>
+          <code>
+            npm run build # Bundles the app and creates the 'dist' directory
+          </code>
+        </pre>
+
         <h2>Available Scripts</h2>
-        <ul>
-          <li>
-            <code>npm start</code> - Runs backend on
-            <code>http://localhost:3000</code>
-          </li>
-          <li>
-            <code>npm run server</code> - Runs backend using Nodemon
-          </li>
-          <li>
-            <code>npm run client</code> - Starts the frontend dev server
-          </li>
-          <li>
-            <code>npm run dev</code> - Runs both frontend and backend
-          </li>
-          <li>
-            <code>npm run build</code> - Bundles the app for production
-          </li>
-        </ul>
+        <table class='table table-bordered'>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <code>npm run dev</code>
+              </td>
+              <td>Starts `backend/server.mjs` with Nodemon (hot-reloading)</td>
+            </tr>
+            <tr>
+              <td>
+                <code>npm start</code>
+              </td>
+              <td>Runs `backend/server.mjs` using Node.js</td>
+            </tr>
+            <tr>
+              <td>
+                <code>npm run build</code>
+              </td>
+              <td>Builds the application for production</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Related Projects</h2>
+        <p>
+          <a href='https://github.com/astra-media/react-express-starter.git'>
+            react-express-starter
+          </a>
+          – A full-stack boilerplate using Express, React + Vite, Redux Toolkit,
+          and React Router.
+        </p>
 
         <h2>License</h2>
         <p>
           This project is licensed under the MIT License. See the{' '}
           <Link
             href={
-              'https://github.com/astra-media/react-express-starter/blob/main/License'
+              'https://github.com/astra-media/nextjs-express-starter/blob/main/LICENSE'
             }
             target='_blank'
           >

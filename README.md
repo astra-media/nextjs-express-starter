@@ -1,40 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next.js + Express Starter Kit (SSR)
 
-## Getting Started
+A full-stack boilerplate template leveraging **Next.js, Express, and Redux Toolkit**.  
+This template provides a robust foundation for developing modern web applications with **server-side rendering (SSR)** using Next.js and Express. It is designed for flexibility and can be easily customized or extended.
 
-First, run the development server:
+The project is structured with a **custom Next.js server**, allowing advanced routing patterns and middleware integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+
+The repository is organized into two primary directories:
+
+- **`backend/`** – Express.js server
+- **`src/`** – Next.js application
+
+## Features
+
+- **Pre-configured with Redux Toolkit** – Includes `{ createSlice }` and `{ createApi }` for state management and API handling.
+- **Custom Hook** – `useIsClient` hook prevents React hydration mismatches.
+- **Styled with React-Bootstrap** – Pre-integrated with `react-bootstrap` for easy UI styling.
+- **Navigation & Routing** – Simple navbar with `Home` and `Features` pages as examples.
+- **Middleware Setup** – Express server configured with `morgan`, `cors`, and `body-parser`.
+- **ES Module Support** – Uses `.mjs` extension for native ES module compatibility.
+- **Developer Tools** – `nodemon` for hot-reloading during backend development.
+
+## Tech Stack
+
+- **Client:** Next.js, Redux Toolkit
+- **Server:** Express.js
+- **Styling:** React-Bootstrap
+
+## Requirements
+
+- **Node.js v18+**
+- _(Optional)_ React Developer Tools & Redux DevTools for debugging
+
+## Installation & Setup
+
+Clone the repository and install dependencies:
+
+```sh
+# Using degit (recommended)
+npx degit https://github.com/astra-media/nextjs-express-starter.git example
+cd example
+
+# OR Clone via Git
+git clone https://github.com/astra-media/nextjs-express-starter.git example
+cd example
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Development Server
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+npm run dev  # Starts the Express server with nodemon
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+> The server runs on **http://localhost:3000/**.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run build  # Bundles the app and creates the 'dist' directory
+```
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command         | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `npm run dev`   | Starts `backend/server.mjs` with Nodemon (hot-reloading) |
+| `npm start`     | Runs `backend/server.mjs` using Node.js                  |
+| `npm run build` | Builds the application for production                    |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Related Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **[react-express-starter][2]** – A full-stack boilerplate using Express, React + Vite, Redux Toolkit, and React Router.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License. See the [LICENSE][1] file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+[1]: https://github.com/astra-media/nextjs-express-starter/blob/main/LICENSE 'LICENSE'
+[2]: https://github.com/astra-media/react-express-starter.git 'react-express-starter'
