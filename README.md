@@ -80,5 +80,5 @@ npm run build  # Bundles the app and creates the 'dist' directory
 
 This project is licensed under the MIT License. See the [LICENSE][1] file for details.
 
-[1]: https://github.com/astra-media/nextjs-express-starter/blob/main/LICENSE 'LICENSE'
+[1]: https://github.com/astra-media/nextjs-express-starter/blob/main/License 'LICENSE'
 [2]: https://github.com/astra-media/react-express-starter.git 'react-express-starter'

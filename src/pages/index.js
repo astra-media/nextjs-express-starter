@@ -145,7 +145,7 @@ export default function Home() {
           This project is licensed under the MIT License. See the{' '}
           <Link
             href={
-              'https://github.com/astra-media/nextjs-express-starter/blob/main/LICENSE'
+              'https://github.com/astra-media/nextjs-express-starter/blob/main/License'
             }
             target='_blank'
           >
